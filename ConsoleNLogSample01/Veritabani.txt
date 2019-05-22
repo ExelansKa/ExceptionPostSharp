@@ -1,0 +1,22 @@
+﻿create proc SP_InsertLog(
+@message nvarchar(MAX),
+@level nvarchar(50),
+@stack nvarchar(MAX)
+)
+as
+insert into 
+AppLogs([Level], [Message], Stack)
+values(@level, @message, @stack)
+
+alter proc SP_InsertLog(
+@message nvarchar(MAX),
+@level nvarchar(50),
+@stack nvarchar(MAX)
+)
+as
+insert into 
+AppLogs([Level], [Message], Stack)
+values(@level, @message, @stack)
+
+
+exec SP_InsertLog 'Info', 'asdad', 'C:/'
