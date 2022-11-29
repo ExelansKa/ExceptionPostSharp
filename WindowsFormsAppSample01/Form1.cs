@@ -38,5 +38,11 @@ namespace WindowsFormsAppSample01
         {
             var deger = Hede();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //ShapeImageForButton.CreateShapeImage(this.ultraButton1);
+            
+        }
     }
 }

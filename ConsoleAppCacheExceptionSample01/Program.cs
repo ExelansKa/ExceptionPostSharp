@@ -1,4 +1,5 @@
 ﻿using PostSharp.Aspects;
+using PostSharp.Patterns.Threading;
 using PostSharp.Serialization;
 using System;
 using System.Collections.Generic;
@@ -43,6 +44,7 @@ namespace ConsoleAppCacheExceptionSample01
             //Console.Read();
         }
 
+        [Dispatched(DispatchedExecutionMode.NonBlocking)]
         [MyException]
         private static void Getir()
         {
